@@ -7,14 +7,11 @@ export const fadeInUp: Variants = {
   },
   whileInView: { 
     opacity: 1, 
-    y: 0 
-  },
-  viewport: { 
-    once: true 
-  },
-  transition: { 
-    duration: 0.6,
-    ease: "easeOut"
+    y: 0,
+    transition: { 
+      duration: 0.6,
+      ease: "easeOut"
+    }
   },
 };
 
@@ -23,14 +20,11 @@ export const fadeIn: Variants = {
     opacity: 0 
   },
   whileInView: { 
-    opacity: 1 
-  },
-  viewport: { 
-    once: true 
-  },
-  transition: { 
-    duration: 0.8,
-    ease: "easeOut"
+    opacity: 1,
+    transition: { 
+      duration: 0.8,
+      ease: "easeOut"
+    }
   },
 };
 
@@ -41,14 +35,11 @@ export const fadeInLeft: Variants = {
   },
   whileInView: { 
     opacity: 1, 
-    x: 0 
-  },
-  viewport: { 
-    once: true 
-  },
-  transition: { 
-    duration: 0.6,
-    ease: "easeOut"
+    x: 0,
+    transition: { 
+      duration: 0.6,
+      ease: "easeOut"
+    }
   },
 };
 
@@ -59,14 +50,11 @@ export const fadeInRight: Variants = {
   },
   whileInView: { 
     opacity: 1, 
-    x: 0 
-  },
-  viewport: { 
-    once: true 
-  },
-  transition: { 
-    duration: 0.6,
-    ease: "easeOut"
+    x: 0,
+    transition: { 
+      duration: 0.6,
+      ease: "easeOut"
+    }
   },
 };
 
@@ -77,14 +65,11 @@ export const scaleIn: Variants = {
   },
   whileInView: { 
     opacity: 1, 
-    scale: 1 
-  },
-  viewport: { 
-    once: true 
-  },
-  transition: { 
-    duration: 0.5,
-    ease: "easeOut"
+    scale: 1,
+    transition: { 
+      duration: 0.5,
+      ease: "easeOut"
+    }
   },
 };
 
@@ -96,9 +81,6 @@ export const staggerContainer: Variants = {
       delayChildren: 0.1,
     },
   },
-  viewport: {
-    once: true,
-  },
 };
 
 export const staggerItem: Variants = {
@@ -108,10 +90,10 @@ export const staggerItem: Variants = {
   },
   whileInView: { 
     opacity: 1, 
-    y: 0 
-  },
-  transition: { 
-    duration: 0.5 
+    y: 0,
+    transition: { 
+      duration: 0.5 
+    }
   },
 };
 
