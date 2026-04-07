@@ -31,7 +31,7 @@ export default function Navbar() {
     <motion.nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "backdrop-blur-xl bg-dark-900/80 border-b border-gold-500/20 shadow-lg"
+          ? "glass border-b border-sand shadow-lg"
           : "bg-transparent"
       }`}
       initial={{ y: -100 }}
@@ -53,19 +53,19 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-cream-100 hover:text-gold-500 transition-colors font-medium"
+                className="text-ebony hover:text-rosegold transition-colors font-medium"
               >
                 {item.name}
               </a>
             ))}
             <Button href={WHATSAPP_LINKS.general} size="sm">
-              Contactar ✨
+              Contactar →
             </Button>
           </div>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-gold-500 p-2"
+            className="md:hidden text-rosegold p-2"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -79,7 +79,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden backdrop-blur-xl bg-dark-900/95 border-b border-gold-500/20"
+            className="md:hidden glass border-b border-sand"
           >
             <div className="px-4 py-6 space-y-4">
               {navItems.map((item, index) => (
@@ -87,7 +87,7 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-cream-100 hover:text-gold-500 transition-colors py-2 font-medium"
+                  className="block text-ebony hover:text-rosegold transition-colors py-2 font-medium"
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -96,7 +96,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <Button href={WHATSAPP_LINKS.general} size="md" className="w-full">
-                Contactar ✨
+                Contactar →
               </Button>
             </div>
           </motion.div>

@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans } from "next/font/google";
+import { Montserrat, Tenor_Sans, Lato } from "next/font/google";
 import "./globals.css";
 import WhatsAppFloat from "@/components/layout/WhatsAppFloat";
 
-const playfair = Playfair_Display({
+const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-montserrat",
+  weight: ["300"], // Light weight for H1/H2
   display: "swap",
 });
 
-const dmSans = DM_Sans({
+const tenorSans = Tenor_Sans({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  variable: "--font-tenor",
+  weight: ["400"],
+  display: "swap",
+});
+
+const lato = Lato({
+  subsets: ["latin"],
+  variable: "--font-lato",
+  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -59,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth">
-      <body className={`${playfair.variable} ${dmSans.variable} antialiased`}>
+      <body className={`${montserrat.variable} ${tenorSans.variable} ${lato.variable} antialiased`}>
         {children}
         <WhatsAppFloat />
       </body>

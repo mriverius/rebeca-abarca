@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import ShimmerText from "@/components/ui/ShimmerText";
 import Button from "@/components/ui/Button";
 import GoldDivider from "@/components/decorative/GoldDivider";
+import SacredGeometry from "@/components/decorative/SacredGeometry";
 import { WHATSAPP_LINKS } from "@/lib/constants";
 import { fadeInLeft, fadeInRight } from "@/lib/animations";
 
@@ -22,16 +23,19 @@ export default function About() {
             className="relative"
           >
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-dark-900/20 to-transparent z-10" />
-              <div className="w-full h-full bg-gradient-to-br from-gold-500/20 to-gold-600/20 flex items-center justify-center">
-                <p className="text-dark-800 text-center px-8 font-serif text-lg">
-                  [Insertar foto de Rebeca aquí]<br />
-                  <span className="text-sm">Reemplazar con imagen real en /public/images/rebeca.jpg</span>
-                </p>
-              </div>
+              <img 
+                src="/rebeca.jpg" 
+                alt="Rebeca - Coach Intuitiva & Sound Healing"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-rosegold/10 to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-gold-500 rounded-full opacity-20 -z-10" />
-            <div className="absolute -top-6 -left-6 w-24 h-24 border-2 border-gold-500 rounded-full opacity-20 -z-10" />
+            <div className="absolute -bottom-6 -right-6 -z-10">
+              <SacredGeometry type="metatron" size={120} />
+            </div>
+            <div className="absolute -top-6 -left-6 -z-10">
+              <SacredGeometry type="seed" size={100} />
+            </div>
           </motion.div>
 
           <motion.div

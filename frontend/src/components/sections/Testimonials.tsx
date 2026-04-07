@@ -6,6 +6,7 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import ShimmerText from "@/components/ui/ShimmerText";
 import GlassCard from "@/components/ui/GlassCard";
 import Button from "@/components/ui/Button";
+import SacredGeometry from "@/components/decorative/SacredGeometry";
 import { TESTIMONIALS, WHATSAPP_LINKS } from "@/lib/constants";
 import { staggerContainer, staggerItem } from "@/lib/animations";
 import { Quote } from "lucide-react";
@@ -16,8 +17,14 @@ const GoldParticles = dynamic(() => import("@/components/decorative/GoldParticle
 
 export default function Testimonials() {
   return (
-    <SectionWrapper className="bg-dark-900 relative overflow-hidden" id="testimonials">
-      <GoldParticles />
+    <SectionWrapper className="bg-champagne relative overflow-hidden breathe" id="testimonials">
+      {/* Sacred Geometry background */}
+      <div className="absolute top-1/4 left-10 opacity-8">
+        <SacredGeometry type="seed" size={100} />
+      </div>
+      <div className="absolute bottom-1/4 right-10 opacity-8">
+        <SacredGeometry type="triangle" size={90} />
+      </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -36,15 +43,15 @@ export default function Testimonials() {
           {TESTIMONIALS.map((testimonial, index) => (
             <motion.div key={index} variants={staggerItem}>
               <GlassCard className="h-full">
-                <Quote className="w-8 h-8 text-gold-500 mb-4 opacity-50" />
+                <Quote className="w-8 h-8 text-[#C6A96C] mb-4 opacity-50" />
                 
-                <p className="text-cream-100 text-lg leading-relaxed mb-6 italic">
+                <p className="text-ebony text-lg leading-relaxed mb-6 italic">
                   "{testimonial.text}"
                 </p>
                 
                 <div className="mt-auto">
-                  <p className="font-semibold text-gold-400">{testimonial.name}</p>
-                  <p className="text-cream-200/70 text-sm">{testimonial.session}</p>
+                  <p className="font-semibold text-[#C6A96C]">{testimonial.name}</p>
+                  <p className="text-ebony-light text-sm">{testimonial.session}</p>
                 </div>
               </GlassCard>
             </motion.div>
@@ -59,7 +66,7 @@ export default function Testimonials() {
           className="text-center"
         >
           <Button href={WHATSAPP_LINKS.general} size="lg">
-            Viví tu propia experiencia ✨
+            Viví tu propia experiencia →
           </Button>
         </motion.div>
       </div>

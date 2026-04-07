@@ -9,7 +9,7 @@ import { staggerContainer, staggerItem } from "@/lib/animations";
 
 export default function Problem() {
   return (
-    <SectionWrapper className="bg-cream-50" id="problem">
+    <SectionWrapper className="bg-champagne breathe" id="problem">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <ShimmerText as="h2" className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -28,12 +28,12 @@ export default function Problem() {
             <motion.div
               key={index}
               variants={staggerItem}
-              className="flex items-start gap-4 p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gold-500/10 hover:border-gold-500/30 transition-colors"
+              className="flex items-start gap-4 p-6 glass-card rounded-2xl hover:border-sand-dark transition-colors duration-500"
             >
-              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold-500/10 flex items-center justify-center mt-1">
-                <Check className="w-4 h-4 text-gold-600" />
+              <div className="flex-shrink-0 w-6 h-6 rounded-full bg-[#C6A96C]/20 flex items-center justify-center mt-1">
+                <Check className="w-4 h-4 text-[#C6A96C]" />
               </div>
-              <p className="text-dark-800 text-lg leading-relaxed flex-1">
+              <p className="text-ebony text-lg leading-relaxed flex-1">
                 {point.text}
               </p>
             </motion.div>
@@ -47,7 +47,7 @@ export default function Problem() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-center"
         >
-          <p className="font-serif text-2xl md:text-3xl text-dark-900 font-medium italic">
+          <p className="font-tenor text-2xl md:text-3xl text-ebony font-medium italic">
             "No viniste solo a lograr. <br />Viniste a habitar tu vida."
           </p>
         </motion.div>

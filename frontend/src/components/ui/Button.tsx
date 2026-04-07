@@ -22,12 +22,12 @@ export default function Button({
   className = "",
   icon,
 }: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center gap-2 font-sans font-medium rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-offset-2 focus:ring-offset-dark-900";
+  const baseStyles = "inline-flex items-center justify-center gap-2 font-lato font-medium rounded-full transition-all duration-500 focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variants = {
-    gold: "bg-gradient-to-r from-gold-500 to-gold-600 text-dark-900 hover:from-gold-400 hover:to-gold-500 shadow-lg hover:shadow-gold-500/50 glow-gold",
-    outline: "border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-dark-900 backdrop-blur-sm",
-    ghost: "text-gold-500 hover:bg-gold-500/10 backdrop-blur-sm",
+    gold: "bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#D4AF37] text-ebony-dark hover:from-[#FFD700] hover:to-[#F5D78E] shadow-lg hover:shadow-xl hover:shadow-yellow-500/30",
+    outline: "border-2 border-rosegold text-rosegold hover:bg-rosegold hover:text-cloud backdrop-blur-sm glow-rosegold",
+    ghost: "text-ebony hover:bg-sand hover:text-rosegold backdrop-blur-sm",
   };
 
   const sizes = {

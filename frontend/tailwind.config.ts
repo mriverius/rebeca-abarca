@@ -9,31 +9,47 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Renacer del Alma Brand Palette
+        champagne: {
+          DEFAULT: '#F3EFE0', // Champagne Silk - Main Canvas
+          light: '#FDFAF5',
+        },
+        rosegold: {
+          DEFAULT: '#B76E79', // Rose Gold Dust - CTAs & Links
+          light: '#C98892',
+          dark: '#A65968',
+        },
+        sand: {
+          DEFAULT: '#D7C49E', // Warm Sand - Structure & Dividers
+          light: '#E5D8B8',
+          dark: '#C9B688',
+        },
+        ebony: {
+          DEFAULT: '#3D3D3D', // Ebony Mist - Primary Text
+          light: '#5A5A5A',
+          dark: '#2A2A2A',
+        },
+        cloud: {
+          DEFAULT: '#FFFFFF', // Cloud White - Highlights
+        },
+        // Legacy support (can be removed after full migration)
         gold: {
-          50: '#FDF8EF',
-          100: '#F5F0E6',
-          200: '#F5D78E',
-          300: '#FFD700',
-          400: '#E6C200',
-          500: '#D4AF37',
-          600: '#C6A96C',
-          700: '#B8960C',
-          800: '#9A7D0A',
-          900: '#7D6608',
+          500: '#B76E79',
+          600: '#A65968',
         },
         cream: {
-          50: '#FDFAF5',
-          100: '#FDF8EF',
-          200: '#F5F0E6',
+          100: '#F3EFE0',
         },
         dark: {
-          900: '#1A1A1A',
-          800: '#2A2A2A',
+          900: '#3D3D3D',
+          800: '#5A5A5A',
         }
       },
       fontFamily: {
-        serif: ['var(--font-playfair)', 'serif'],
-        sans: ['var(--font-dm-sans)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'], // H1, H2
+        tenor: ['var(--font-tenor)', 'sans-serif'], // H3, Accents
+        lato: ['var(--font-lato)', 'sans-serif'], // Body, Nav
+        sans: ['var(--font-lato)', 'sans-serif'], // Default
       },
       animation: {
         'shimmer': 'shimmer 3s linear infinite',
@@ -78,6 +94,12 @@ const config: Config = {
       backgroundSize: {
         '200%': '200% 200%',
         '400%': '400% 400%',
+      },
+      backdropBlur: {
+        xs: '2px',
+      },
+      letterSpacing: {
+        widest: '0.3em',
       },
     },
   },

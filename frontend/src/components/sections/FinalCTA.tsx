@@ -9,9 +9,7 @@ import { fadeInUp } from "@/lib/animations";
 
 export default function FinalCTA() {
   return (
-    <section className="relative py-32 bg-gradient-gold-animated overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-900/95 via-dark-900/90 to-dark-900/95 z-0" />
-      
+    <section className="relative py-32 bg-gradient-to-br from-sand via-champagne to-sand-light overflow-hidden breathe">
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5">
         <FlowerOfLife size={600} />
       </div>
@@ -22,24 +20,24 @@ export default function FinalCTA() {
           initial="initial"
           whileInView="whileInView"
           viewport={{ once: true }}
-          className="space-y-8"
+          className="glass-card rounded-3xl p-12 md:p-16 space-y-8"
         >
           <div>
-            <ShimmerText as="h2" className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <ShimmerText as="h2" className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               ¿Lista para reconectar con tu poder interior?
             </ShimmerText>
-            <p className="text-cream-100 text-xl md:text-2xl font-light">
+            <p className="text-ebony text-xl md:text-2xl font-tenor">
               Tu energía es tu activo más valioso
             </p>
           </div>
 
           <div className="pt-4">
-            <Button href={WHATSAPP_LINKS.general} size="lg" className="text-xl px-12 py-5">
-              Comenzar mi transformación 🙌
+            <Button href={WHATSAPP_LINKS.general} size="lg" className="text-xl px-12 py-5 bg-rosegold hover:bg-rosegold-dark text-cloud glow-rosegold">
+              Comenzar mi transformación →
             </Button>
           </div>
 
-          <p className="text-cream-200/70 text-sm pt-8">
+          <p className="text-ebony-light text-sm pt-8">
             Escribime por WhatsApp y conversemos sobre cómo puedo acompañarte
           </p>
         </motion.div>

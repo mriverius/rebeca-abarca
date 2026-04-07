@@ -1,14 +1,14 @@
 export const WHATSAPP_BASE = "https://wa.me/50670700456";
 
 export const WHATSAPP_LINKS = {
-  general: `${WHATSAPP_BASE}?text=Hola%20Rebeca%20✨%20Me%20interesa%20conocer%20más%20sobre%20tus%20servicios`,
-  coaching: `${WHATSAPP_BASE}?text=Hola%20Rebeca%20✨%20Me%20interesa%20una%20sesión%20de%20Coaching%201:1`,
-  soundHealingIndividual: `${WHATSAPP_BASE}?text=Hola%20Rebeca%20✨%20Me%20interesa%20una%20sesión%20de%20Sound%20Healing`,
-  soundHealingCouple: `${WHATSAPP_BASE}?text=Hola%20Rebeca%20✨%20Me%20interesa%20Sound%20Healing%20en%20pareja`,
-  soundHealingGroup: `${WHATSAPP_BASE}?text=Hola%20Rebeca%20✨%20Me%20interesa%20una%20sesión%20grupal%20de%20Sound%20Healing`,
-  massageSound: `${WHATSAPP_BASE}?text=Hola%20Rebeca%20✨%20Me%20interesa%20la%20sesión%20de%20Masaje%20y%20Sonido`,
-  events: `${WHATSAPP_BASE}?text=Hola%20Rebeca%20✨%20Quiero%20cotizar%20un%20evento%20privado%20de%20Sound%20Healing`,
-  monthlySessions: `${WHATSAPP_BASE}?text=Hola%20Rebeca%20✨%20Quiero%20reservar%20espacio%20en%20la%20próxima%20sesión%20grupal%20mensual`,
+  general: `${WHATSAPP_BASE}?text=Hola%20Rebeca,%20me%20interesa%20conocer%20más%20sobre%20tus%20servicios`,
+  coaching: `${WHATSAPP_BASE}?text=Hola%20Rebeca,%20me%20interesa%20una%20sesión%20de%20Coaching%201:1`,
+  soundHealingIndividual: `${WHATSAPP_BASE}?text=Hola%20Rebeca,%20me%20interesa%20una%20sesión%20de%20Sound%20Healing`,
+  soundHealingCouple: `${WHATSAPP_BASE}?text=Hola%20Rebeca,%20me%20interesa%20Sound%20Healing%20en%20pareja`,
+  soundHealingGroup: `${WHATSAPP_BASE}?text=Hola%20Rebeca,%20me%20interesa%20una%20sesión%20grupal%20de%20Sound%20Healing`,
+  massageSound: `${WHATSAPP_BASE}?text=Hola%20Rebeca,%20me%20interesa%20la%20sesión%20de%20Masaje%20y%20Sonido`,
+  events: `${WHATSAPP_BASE}?text=Hola%20Rebeca,%20quiero%20cotizar%20un%20evento%20privado%20de%20Sound%20Healing`,
+  monthlySessions: `${WHATSAPP_BASE}?text=Hola%20Rebeca,%20quiero%20reservar%20espacio%20en%20la%20próxima%20sesión%20grupal%20mensual`,
 };
 
 export interface Service {
@@ -27,16 +27,16 @@ export const SERVICES: Service[] = [
     name: "Coaching 1:1 \"Sintonía del Alma\"",
     description: "Identidad, energía y reprogramación subconsciente. Un acompañamiento personalizado para reconectar con tu poder interior.",
     price: "₡33.000",
-    icon: "✨",
+    icon: "◈",
     whatsappLink: WHATSAPP_LINKS.coaching,
     featured: true,
   },
   {
     id: "sound-healing-individual",
     name: "Sound Healing Individual",
-    description: "Regulación del sistema nervioso y descanso profundo a través de cuencos tibetanos y de cristal.",
-    price: "₡33.000",
-    icon: "🎵",
+    description: "Sesión 1:1 de sanación sonora con cuencos tibetanos, diapasones y técnicas vibraciones para equilibrar tu energía.",
+    price: "₡30.000",
+    icon: "♪",
     whatsappLink: WHATSAPP_LINKS.soundHealingIndividual,
     featured: true,
   },
@@ -45,7 +45,7 @@ export const SERVICES: Service[] = [
     name: "Sound Healing en Pareja",
     description: "Experiencia compartida de sanación sonora para fortalecer la conexión y el bienestar conjunto.",
     price: "₡55.000",
-    icon: "💫",
+    icon: "♥",
     whatsappLink: WHATSAPP_LINKS.soundHealingCouple,
   },
   {
@@ -53,7 +53,7 @@ export const SERVICES: Service[] = [
     name: "Sound Healing Grupal",
     description: "De 3 a 8 personas. Una experiencia colectiva de vibración y coherencia.",
     price: "Desde ₡63.000",
-    icon: "🌈",
+    icon: "◈",
     whatsappLink: WHATSAPP_LINKS.soundHealingGroup,
   },
   {
@@ -61,7 +61,7 @@ export const SERVICES: Service[] = [
     name: "Masaje + Sonido",
     description: "Experiencia premium que combina trabajo corporal y vibración sonora para un descanso profundo.",
     price: "$120 / $190",
-    icon: "🙏",
+    icon: "✤",
     whatsappLink: WHATSAPP_LINKS.massageSound,
   },
   {
@@ -69,7 +69,7 @@ export const SERVICES: Service[] = [
     name: "Eventos Privados / Corporativos",
     description: "Hasta 25+ personas. Sesiones personalizadas para celebraciones, retiros, eventos corporativos y más.",
     price: "Desde ₡130.000",
-    icon: "⚜️",
+    icon: "✦",
     whatsappLink: WHATSAPP_LINKS.events,
   },
   {
@@ -77,7 +77,7 @@ export const SERVICES: Service[] = [
     name: "Sesiones Mensuales Grupales",
     description: "Sound Healing + Meditación en estudio (hasta 8 personas). Espacios regulares de conexión.",
     price: "₡15.000 /pers",
-    icon: "🧘‍♀️",
+    icon: "◉",
     whatsappLink: WHATSAPP_LINKS.monthlySessions,
   },
 ];
@@ -157,24 +157,34 @@ export const PAIN_POINTS: PainPoint[] = [
 
 export const TESTIMONIALS = [
   {
-    name: "María S.",
-    text: "Rebeca tiene un don especial para crear espacios de profunda transformación. Después de mi sesión de Sound Healing sentí una paz que no experimentaba en años.",
-    session: "Sound Healing Individual",
+    name: "Shirley",
+    text: "Partícipe del retiro yo soy portal 2025 y me encantó, llenó mis expectativas... me sentí muy emotiva y agradecida durante y después del retiro y me siento con la mayor de las energías para salir a la vida a continuar disfrutando de ella... todo lo vivido fue maravilloso... Gracias Rebe por tu amor y dedicación a esto tan maravilloso que practicas y que se quieres que muchas más personas se sientan como vos te sientes.",
+    session: "Retiro Yo Soy Portal 2025",
   },
   {
-    name: "Laura M.",
-    text: "El coaching con Rebeca me ayudó a reconectar con mi esencia. Pasé de vivir en automático a crear mi vida desde un lugar de poder y claridad.",
-    session: "Coaching 1:1",
+    name: "Elvira",
+    text: "Gracias Rebe por crear y sostener un espacio donde se sintió tanto amor, la forma en que transmites la información hace que sea tan sencillo de entender pero a la vez tan profundo el mensaje. Fue una experiencia que recomendaría no se la pierdan y deseosa de volvernos a encontrar nuevamente.",
+    session: "Retiro Yo Soy Portal 2025",
   },
   {
-    name: "Ana & Carlos",
-    text: "La sesión en pareja fue mágica. Nos permitió reconectar a un nivel que no habíamos experimentado antes. Totalmente recomendado.",
-    session: "Sound Healing Pareja",
+    name: "Haylen",
+    text: "Ha sido una experiencia única, de mucho aprendizaje y liberación donde me permitió entrar en lo más profundo de mi ser interior.",
+    session: "Retiro Yo Soy Portal 2025",
   },
   {
-    name: "Sofía R.",
-    text: "Las sesiones mensuales se convirtieron en mi espacio sagrado. Rebeca crea una atmósfera de seguridad y conexión profunda.",
-    session: "Sesiones Grupales",
+    name: "María Jesús",
+    text: "Soy portal es una experiencia maravillosa y única que todas deberíamos darnos la oportunidad de vivir y sentir. Amé este día",
+    session: "Retiro Yo Soy Portal 2025",
+  },
+  {
+    name: "Caro",
+    text: "Una experiencia magica, y de regalo con una misma, ame el ambiente de seguridad y sororidad",
+    session: "Retiro Yo Soy Portal 2025",
+  },
+  {
+    name: "Yorleny",
+    text: "Lo recomiendo mucho porque es de mucha ayuda para guiarnos en la definición de objetivos alineados con nuestra espiritualidad",
+    session: "Retiro Yo Soy Portal 2025",
   },
 ];
 

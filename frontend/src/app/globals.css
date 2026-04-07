@@ -8,74 +8,104 @@
   }
   
   body {
-    @apply font-sans antialiased;
+    @apply font-lato antialiased bg-champagne text-ebony;
+    line-height: 1.8;
+  }
+
+  /* Typography Hierarchy - Renacer del Alma */
+  h1, h2 {
+    @apply font-montserrat font-light uppercase tracking-widest text-rosegold;
+  }
+
+  h3 {
+    @apply font-tenor;
+  }
+
+  /* Global Image Filter */
+  img {
+    filter: sepia(10%) contrast(95%) brightness(105%);
   }
 }
 
 @layer utilities {
+  /* Glass-morphism Effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(215, 196, 158, 0.3);
+  }
+
+  /* Soft Golden Glow */
   .text-shimmer {
-    background: linear-gradient(
-      90deg,
-      #D4AF37 0%,
-      #FFD700 25%,
-      #F5D78E 50%,
-      #FFD700 75%,
-      #D4AF37 100%
-    );
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shimmer 3s linear infinite;
+    color: #C6A96C;
+    text-shadow: 0 0 20px rgba(198, 169, 108, 0.5),
+                 0 0 40px rgba(198, 169, 108, 0.3),
+                 0 0 60px rgba(198, 169, 108, 0.2);
   }
 
-  .bg-gradient-gold-animated {
-    background: linear-gradient(
-      45deg,
-      #1A1A1A 0%,
-      #2A2A2A 25%,
-      #3A3A2A 50%,
-      #2A2A2A 75%,
-      #1A1A1A 100%
-    );
-    background-size: 400% 400%;
-    animation: gradient-shift 8s ease infinite;
+  /* Energy Hover Glow */
+  .glow-rosegold {
+    box-shadow: 0 0 20px rgba(183, 110, 121, 0.3),
+                0 0 40px rgba(183, 110, 121, 0.2),
+                0 0 60px rgba(183, 110, 121, 0.1);
+    transition: box-shadow 0.5s ease;
   }
 
-  .glow-gold {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3),
-                0 0 40px rgba(212, 175, 55, 0.2),
-                0 0 60px rgba(212, 175, 55, 0.1);
+  .glow-rosegold:hover {
+    box-shadow: 0 0 30px rgba(183, 110, 121, 0.5),
+                0 0 60px rgba(183, 110, 121, 0.3),
+                0 0 90px rgba(183, 110, 121, 0.2);
   }
 
-  .glow-gold-strong {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5),
-                0 0 60px rgba(212, 175, 55, 0.3),
-                0 0 90px rgba(212, 175, 55, 0.2);
+  /* Noise Texture Overlay */
+  .noise-texture::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noise"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" /%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noise)" opacity="0.03"/%3E%3C/svg%3E');
+    pointer-events: none;
+    z-index: 1;
   }
 
-  .text-glow-gold {
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5),
-                 0 0 40px rgba(212, 175, 55, 0.3);
+  /* Negative Space - Double Padding */
+  .breathe {
+    padding: 4rem 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .breathe {
+      padding: 6rem 4rem;
+    }
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Rose Gold Theme */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1A1A1A;
+  background: #F3EFE0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #D4AF37, #C6A96C);
+  background: linear-gradient(180deg, #B76E79, #A65968);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #FFD700, #D4AF37);
+  background: linear-gradient(180deg, #C98892, #B76E79);
 }
 
 /* Shimmer keyframe */
@@ -98,13 +128,13 @@
   }
 }
 
-/* Selection color */
+/* Selection color - Rose Gold */
 ::selection {
-  background-color: rgba(212, 175, 55, 0.3);
-  color: #FDF8EF;
+  background-color: rgba(183, 110, 121, 0.3);
+  color: #3D3D3D;
 }
 
 ::-moz-selection {
-  background-color: rgba(212, 175, 55, 0.3);
-  color: #FDF8EF;
+  background-color: rgba(183, 110, 121, 0.3);
+  color: #3D3D3D;
 }

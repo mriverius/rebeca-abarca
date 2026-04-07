@@ -5,20 +5,27 @@ import SectionWrapper from "@/components/ui/SectionWrapper";
 import ShimmerText from "@/components/ui/ShimmerText";
 import GlassCard from "@/components/ui/GlassCard";
 import Button from "@/components/ui/Button";
+import SacredGeometry from "@/components/decorative/SacredGeometry";
 import { SERVICES } from "@/lib/constants";
 import { staggerContainer, staggerItem } from "@/lib/animations";
 
 export default function Services() {
   return (
-    <SectionWrapper className="bg-gradient-gold-animated relative overflow-hidden" id="services">
-      <div className="absolute inset-0 bg-dark-900/90 z-0" />
+    <SectionWrapper className="bg-sand-light relative overflow-hidden breathe" id="services">
+      {/* Sacred Geometry background */}
+      <div className="absolute top-10 right-10 opacity-10">
+        <SacredGeometry type="hexagon" size={150} />
+      </div>
+      <div className="absolute bottom-20 left-10 opacity-10">
+        <SacredGeometry type="vesica" size={120} />
+      </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <ShimmerText as="h2" className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             Servicios
           </ShimmerText>
-          <p className="text-cream-200 text-lg md:text-xl max-w-2xl mx-auto">
+          <p className="text-ebony text-lg md:text-xl max-w-2xl mx-auto">
             Experiencias diseñadas para tu transformación y bienestar
           </p>
         </div>
@@ -35,11 +42,11 @@ export default function Services() {
               <GlassCard className={`h-full flex flex-col ${service.featured ? 'border-gold-500/40' : ''}`}>
                 <div className="text-4xl mb-4">{service.icon}</div>
                 
-                <h3 className="font-serif text-2xl text-gold-400 mb-3 font-semibold">
+                <h3 className="font-tenor text-2xl text-shimmer mb-3 font-semibold">
                   {service.name}
                 </h3>
                 
-                <p className="text-cream-200 leading-relaxed mb-6 flex-1">
+                <p className="text-ebony-light leading-relaxed mb-6 flex-1">
                   {service.description}
                 </p>
                 
@@ -47,10 +54,10 @@ export default function Services() {
                   <div className="flex items-baseline gap-2">
                     <span className="text-2xl font-bold text-shimmer">{service.price}</span>
                     {service.id === "sound-healing-group" && (
-                      <span className="text-sm text-cream-200/70">según grupo</span>
+                      <span className="text-sm text-ebony-light/70">según grupo</span>
                     )}
                     {service.id === "massage-sound" && (
-                      <span className="text-sm text-cream-200/70">individual / pareja</span>
+                      <span className="text-sm text-ebony-light/70">individual / pareja</span>
                     )}
                   </div>
                   
@@ -60,7 +67,7 @@ export default function Services() {
                     size="md"
                     className="w-full"
                   >
-                    Reservar ✨
+                    Reservar →
                   </Button>
                 </div>
               </GlassCard>
@@ -75,11 +82,11 @@ export default function Services() {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="text-center mt-16"
         >
-          <p className="text-cream-200/80 mb-6">
+          <p className="text-ebony mb-6">
             ¿Necesitás algo personalizado o tenés dudas?
           </p>
           <Button href={SERVICES.find(s => s.id === "coaching")!.whatsappLink} size="lg">
-            Consultá por tu caso 💫
+            Consultá por tu caso →
           </Button>
         </motion.div>
       </div>
